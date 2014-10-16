@@ -14,13 +14,13 @@
     });
 
     function color(lib, pkr) { // check if color chosen is in the library
-        var colorz = "yellow";
+        var arg = "yellow";
         for (var i = 0, len = lib.length; i < len; i++) {
             if (pkr === lib[i]) {
-                colorz = lib[i];
+                arg = lib[i];
             }
         }
-        return colorz;
+        return arg;
     }
 
 
