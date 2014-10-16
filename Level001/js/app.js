@@ -14,7 +14,7 @@
     });
 
     function color(lib, pkr) { // check if color chosen is in the library
-        var arg = "yellow";
+        var arg = "yellow"; // default to this if no color is selected.
         for (var i = 0, len = lib.length; i < len; i++) {
             if (pkr === lib[i]) {
                 arg = lib[i];
@@ -22,7 +22,6 @@
         }
         return arg;
     }
-
 
     $("p").css({
         "color": "red",
