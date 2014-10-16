@@ -36,6 +36,3 @@
     $("li").css("color", blah);
 
 })();
-
-
-//Chnage all h1 headings to blue and the text to "hello"
