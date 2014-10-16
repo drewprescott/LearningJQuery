@@ -7,16 +7,20 @@
     var colorLib = ["blue", "green", "red"]; //demo library of colors
     var colorPkr = prompt("What color would you like?"); // ask user for colors
 
+// Match colors chosen with Library -- Two different ways of checking, one with lodash, the other JS.
+
+    var blah = _.find(colorLib, function(clr){ //Fun with lodash too
+      return clr === colorPkr;
+    });
+
     function color(lib, pkr) { // check if color chosen is in the library
-        var i = 0;
-        var colorz = null;
-        for (i, len = lib.length; i < len; i++) {
-            if (pkr !== lib[i]) {
-                colorz = "grey"; // defualt to grey otherwise
-            } else {
-                colorz = lib[i]; // chose color based off of library
-            } return colorz;
+        var arg = "yellow"; // default to this if no color is selected.
+        for (var i = 0, len = lib.length; i < len; i++) {
+            if (pkr === lib[i]) {
+                arg = lib[i];
+            }
         }
+        return arg;
     }
 
     $("p").css({
@@ -29,9 +33,6 @@
         "font-style": "bold"
     }).text("This should be: " + color(colorLib, colorPkr));
 
-    $("li").css("color", "green");
+    $("li").css("color", blah);
 
 })();
-
-
-//Chnage all h1 headings to blue and the text to "hello"
