@@ -1,5 +1,6 @@
 //app.js
-
+(function () {
+//Data
 var dataColor = ["red", "yellow", "gold", "green", "grey"];
 var dataPeople = [{
     "name": "Drew Prescott",
@@ -32,13 +33,15 @@ var dataContent = [{
         "story": "Non consectetur reprehenderit ut, deserunt ribeye laborum nostrud andouille sirloin hamburger magna proident labore. Irure ball tip kielbasa sunt. In brisket swine, pig andouille proident shoulder cow ut aliquip laboris salami kevin. Non qui capicola, pastrami laboris aute spare ribs irure ham beef chuck hamburger ground round. Swine labore short loin spare ribs ullamco sirloin commodo pig nisi culpa biltong andouille tail in. Pork ut eu bacon cillum incididunt consequat pig, sed biltong. Frankfurter pork chop ut, jerky strip steak exercitation occaecat turducken ut."
 }];
 
+//LoDash
+var colorChoice = prompt("What color should the header be?");
+var headerColor = _.find(dataColor, function(dtClr){
+  return dtClr === colorChoice;
+});
 
-(function () {
-
-    $('#hi').text(dataPeople[1].name).css("color", dataColor[1]);
+//Jquery
+    $('#hi').text(dataPeople[1].name).css("color", headerColor);
     $('p #toBold').css('font-weight', "bold");
-
-
     $("#area1").text(dataContent[0].story);
 
 
