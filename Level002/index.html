@@ -11,14 +11,17 @@
   <body>
 
     <div class="row" id="headerArea">
-      <div class="large-12 columns">
+      <div class="large-10 columns">
         <h1 id="hi"></h1>
+      </div>
+      <div class="large-2 columns">
+        <h1 id="cntr" data-name="myelement" data-type="counter" data-counter="0">0</h1>
       </div>
     </div>
 
 
     <div class="row">
-      <div class="large-12 columns">
+      <div class="large-12 columns" id="bio">
       	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, <span id="toBold">sed quia non numquam eius modi tempora incidunt</span> ut labore et dolore magnam aliquam quaerat voluptatem.</p>
       </div>
     </div>
@@ -46,8 +49,8 @@
     <form>
   <div class="row">
     <div class="large-12 columns">
-      <label>Input Label
-        <input type="text" placeholder="large-12.columns" />
+      <label>Your name here:
+        <input type="text" id="name" name="namei" value="Dear"/>
       </label>
     </div>
   </div>
@@ -76,9 +79,9 @@
   </div>
   <div class="row">
     <div class="large-12 columns">
-      <label>Select Box
-        <select>
-          <option value="husker">Husker</option>
+      <label>This is a select box.
+        <select value="skills" name="skills" id="skills">
+          <option value="none">Please select an option.</option>
           <option value="starbuck">Starbuck</option>
           <option value="hotdog">Hot Dog</option>
           <option value="apollo">Apollo</option>
@@ -89,12 +92,12 @@
   <div class="row">
     <div class="large-6 columns">
       <label>Choose Your Favorite</label>
-      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+      <input type="radio" name="pokemon" value="Red" id="Red"><label for="pokemonRed">Red</label>
+      <input type="radio" name="pokemon" value="Blue" id="Blue"><label for="pokemonBlue">Blue</label>
     </div>
     <div class="large-6 columns">
       <label>Check these out</label>
-      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input id="checkbox1" type="checkbox" checked="checked"><label for="checkbox1">Checkbox 1</label>
       <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
     </div>
   </div>
