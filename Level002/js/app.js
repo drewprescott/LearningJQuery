@@ -19,17 +19,16 @@
     return x; //return $('#content').children().eq(#current statue#) each itteration
     }
 
-var panel = $('#redArea');
-panel.fadeOut(3000).delay(1000).fadeIn(3000);
+  var cent = $('#callout');
+  cent.addClass('panel').fadeIn(1000);
 
   //itterate over length of content to populate story area
     var i = 0, divLen = $('#content').children().length, dataLen = dataContent.length;
     while (i <= dataLen){ // for the length of the story content area, run
-    assignStory(i).text(dataContent[i].story);
-      if(divLen >= i){
+    assignStory(i).text(randData[i].first_name).addClass('panel');
+
         i++;
-      }}
 
-
+      }
 
 })();
