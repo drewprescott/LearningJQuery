@@ -1,7 +1,8 @@
 //app.js
 (function() {
-    //LoDash
+    //LoDash & functional Javascript quick dive.
     var colorChoice = prompt("What color should the header be?");
+    if (colorChoic === " ") throw new Error("A value was expected.");
     var headerColor = _.find(dataColor, function(dtClr) {
         return dtClr === colorChoice;
     });
@@ -24,11 +25,21 @@
     var cent = $('#callout');
     cent.addClass('panel').fadeIn(3000);
 
+    $('#buttonGroup').append('<li>' + ' Five '  + '</li>');
+    $('aside ul:first li').eq(2).replaceWith('<li>' + ' square '  + '</li>');
+    $('aside ul:first li').eq(2).addClass('button  tiny');
+    $('#buttonGroup').children().eq(4).addClass('button  tiny');
+
     $('li').text(
       function( i, text ){
         return ( i + 1 ) + ". " + text;
       }
     );
+
+    //$('p').wrap('<div>').css({
+      //''"background-color": "red",
+      //"font-weight": "bold"
+    //});
 
     $('#bio').html('<p>'  + dataContent[0].story + '<p>').addClass('panel').fadeOut(4000).show('fast');
 
