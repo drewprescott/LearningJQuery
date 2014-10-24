@@ -2,7 +2,7 @@ body {
   background: #2c3e50;
 }
 
-table {
+table.main {
   background: #354b60;
 }
 
@@ -18,7 +18,12 @@ td.active {
 	font-weight: bold;
 }
 
+a {
+  text-decoration: none;
+}
 
-td.test {
-  background: red;
+a:hover
+{
+  text-decoration:none;
+  color:pink;
 }
