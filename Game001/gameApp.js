@@ -1,25 +1,24 @@
-
+console.log('drew prescott 2014');
 
 $(function(){
-
-
-
   setInterval(function() {
-        var list = [];
+    //create random value for this itteration.
+        var rand = _.random(0,15);
 
-        for (var i = 0, b = 15; i <= b; i++){
-          list.push(_.random(0,15));
-        }
+    //set the first random li as active.
+        $('tr').children().eq(rand).addClass('active');
 
-        $('tr').children().eq(list[0]).addClass('active');
-
-        $('tr').children().eq(list[0]).on('click', function(e){
-          $( this ).on('click', function(e){$(e.target).removeClass('active');});
+    //set the click function that will remove that class
+        $('tr').children().eq(rand).on('click', function(e){
+    //--Element clicked remove the class of active
+          $( this ).removeClass('active');
         });
 
-
-
-  }, 1000);
+    //If person become idel, and all tds become active, restart
+        if(!$("td:not(.active)").length){
+          $('td').removeClass('active');
+    }
+  }, 1000 );
 
 
 
