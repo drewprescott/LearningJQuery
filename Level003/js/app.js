@@ -52,9 +52,9 @@ $(function(){
 
     console.log($('#rightbuttons').text());
 
-    $('#rightbuttons').click(function(e){
+    $('ul#rightlist').on('click', 'li', function(e){
       var ul = $(e.target).parent();
-
+      event.preventDefault();
       var moreButtons = function(x){
         if( x.length + 1 <= 5 ) {
           return x.length + 1;
@@ -62,9 +62,12 @@ $(function(){
           return false;
         }
       };
-
+      console.log(ul.children().length);
       if (moreButtons(ul.children())) {
-        ul.append("<li> new item " + moreButtons(ul.children()) + "</li>").children().addClass("button tiny alert"); // each click itterate over the lingeth of all chilldren + 1
+        ul.append("<li> new item " + moreButtons(ul.children()) + "</li>").children().addClass("button tiny alert");
+          if(ul.children().length === 5){
+            ul.children().eq(0).remove();
+          }  // each click itterate over the lingeth of all chilldren + 1
       } else {
         $.fx.off = false;
       }
